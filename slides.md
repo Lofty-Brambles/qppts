@@ -43,7 +43,7 @@ transiton: slide-left
 
 # The Definition
 
-Quantum computing, in principle, leverages the parallel processing power of superposition and coordination of entaglement to outperform calculations of classical computers, provided a few restrictions on the tyoe if operations.
+Quantum computing, in principle, leverages the parallel processing power of superposition and coordination of entaglement to outperform calculations of classical computers, provided a few restrictions on the type if operations.
 
 Two key things to consider when under applications of it would be:
 
