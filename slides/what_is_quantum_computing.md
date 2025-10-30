@@ -91,7 +91,7 @@ These gates come together to implement quantum circuits. Building on top of thes
 
 | Framework | Paradigm            | Hardware             | Limitations               | Use-case            |
 | --------- | ------------------- | -------------------- | ------------------------- | ------------------- |
-| Qiskit    | OO-Pythonic         | [IBM Hardware]()     | Vendor-locking            | Hardware prototying |
+| Qiskit    | OO-Pythonic         | IBM Hardware         | Vendor-locking            | Hardware prototying |
 | Cirq      | Procedural-Pythonic | [Google Sycamore]    | Small low-level community | NISQ                |
 | Q#        | Own-.NET like       | Microsoft Azure      | Full language             | Hybrid approaches   |
 | Quipper   | Functional-Haskell  | University of Oxford | Bad support               | Compiers, CT        |
@@ -117,10 +117,10 @@ Of all the service providers, a few narrowed down, provide popular services. Hon
 ---
 transition: slide-left
 layout: figure-side
-figure-url: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAACUCAMAAACp1UvlAAAAMFBMVEXz9Pa5vsq2u8jn6e34+frw8fO+ws7V2d/IzNXCx9HT1t3R09zh4+jt7vGzuMXk5uqJaFxUAAAB2ElEQVR4nO3Z3XaDIBBGUfkVE8D3f9uihqjBuHBWGXPx7dsm6ekoaGzXAQAAAAAAAAAAAAAAAAAAAA9N0bwq+J7Ch7ZZvYiSIoq+bRZdw7AQ0+eT5pXeF5tl6X76fEcx/T19q7Nfp4+XT9J6fEohH42yli7aaYKutAou7ElcXdq7GKN41qZxdXkxLU0hrfqpLv/eLW3dxHi69CBzl3xU7Uo8XfO+/zJUvZWna9x0CVO+0PnPIfJ0+dMu46L0t3SZTZctXuamk+9jYlzn/ffbF+OWHWQ/Ma594r0ei33C5R/tJsbUpb083leNW3eQ7cTYro+jk0fXoTVrPzG+67buQrkSh23W9hp/733Oblq7id3aNXxmra++s6uY1mZi3F3qvejMYVZelbxdWlmRN4rjrDwx3i6VWuQ4H6ny3Mqi4u5K05q21hT25SAuR3Jk7lKv35sO5UkWd5eepzWzZ1ncXeqs5b6udVo/1aVqq1i7dP20WLtC7bnF26V33zvQha47uyLfehztUM8y3k+YKzq+rsuadnXkLobn5MOlY5il21nipGv00zq0FHldtmEuXK4L5QOp//N6DE0gRbtxJcERR+Ya/2O0C4qkcRUAAAAAAAAAAAAAAABc8Aen/B3oUuNbBwAAAABJRU5ErkJggg==
+figureUrl: /final_stack.png
 ---
 
-# Overall Desicions
+# Overall Decisions
 
 - Of all the SDKs provided, Qiskit stands out for it's community support. Being integrated into python also helps over Q#, which is a separate DSL itself.
 
@@ -135,7 +135,7 @@ figure-url: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAACUCAMAAACp1UvlAA
 ---
 transition: slide-left
 layout: figure-side
-figureUrl: /combined_vertical_chart.png
+figureUrl: /what_is_quantum_computing/combined_vertical_chart.png
 figureCaption: Algorithm results for an ideal noiseless simulator (top) and a real quantum computer (bottom).
 ---
 
@@ -166,48 +166,17 @@ layout: table-of-contents
 
 ---
 transition: slide-left
-layout: index
-indexEntries:
-    - {
-          title: "What is Quantum computing?",
-          uri: "https://en.wikipedia.org/wiki/Quantum_computing",
-      }
-    - {
-          title: "Brief on popular Quantum-as-a-service offers.",
-          uri: "https://www.spinquanta.com/news-detail/top-quantum-as-a-service-companies-to-watch",
-      }
-    - {
-          title: "Quick overview on Quantum computing terms.",
-          uri: "https://www.spinquanta.com/news-detail/what-is-quantum-computing-and-how-does-it-work-expert-explained",
-      }
-    - {
-          title: "IBM's draft path on creating headways into fault-tolerance",
-          uri: "https://www.ibm.com/quantum/blog/large-scale-ftqc",
-      }
-    - {
-          title: "Solving linear systems using HHL with Qiskit",
-          uri: "https://arxiv.org/pdf/2509.16640",
-      }
-    - {
-          title: "Evaluating incompressible NSE on noisy quantum hardware",
-          uri: "https://github.com/comp-physics/NISQ-Quantum-CFD",
-      }
-    - {
-          title: "ODEs using Pade approximation.",
-          uri: "https://quantum-journal.org/papers/q-2025-06-17-1770/pdf/",
-      }
-    - {
-          title: "Implemented HHL in Qiskit, evaluating PDEs",
-          uri: "https://github.com/comp-physics/qce23-qpde-tutorial",
-      }
-    - {
-          title: "PDEs using Quantum computing.",
-          uri: "https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2022.914241/full",
-      }
-    - {
-          title: "Quick rundown of a simulated 32-qubit CPU service (Blue-Qubit)",
-          uri: "app.bluequbit.io/docs",
-      }
 ---
 
 # References used
+
+1. [What is Quantum computing?](https://en.wikipedia.org/wiki/Quantum_computing)
+1. [Brief on popular Quantum-as-a-service offers.](https://www.spinquanta.com/news-detail/top-quantum-as-a-service-companies-to-watch)
+1. [Quick overview on Quantum computing terms.](https://www.spinquanta.com/news-detail/what-is-quantum-computing-and-how-does-it-work-expert-explained)
+1. [IBM's draft path on creating headways into fault-tolerance](https://www.ibm.com/quantum/blog/large-scale-ftqc)
+1. [Solving linear systems using HHL with Qiskit](https://arxiv.org/pdf/2509.16640)
+1. [Evaluating incompressible NSE on noisy quantum hardware](https://github.com/comp-physics/NISQ-Quantum-CFD)
+1. [ODEs using Pade approximation.](https://quantum-journal.org/papers/q-2025-06-17-1770/pdf/)
+1. [Implemented HHL in Qiskit, evaluating PDEs](https://github.com/comp-physics/qce23-qpde-tutorial)
+1. [PDEs using Quantum computing.](https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2022.914241/full)
+1. [Quick rundown of a simulated 32-qubit CPU service (Blue-Qubit)](app.bluequbit.io/docs)

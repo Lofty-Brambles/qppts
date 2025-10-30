@@ -3,9 +3,9 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "build": "slidev build",
-        "dev": "slidev --open",
-        "export": "slidev export"
+        "build": "./slidev.bash build",
+        "dev": "./slidev.bash --open",
+        "export": "./slidev.bash export"
     },
     "dependencies": {
         "@slidev/cli": "^52.6.0",

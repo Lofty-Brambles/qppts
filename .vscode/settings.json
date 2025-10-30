@@ -1,0 +1,4 @@
+{
+    "slidev.include": ["slides/**/*.md"],
+    "slidev.port": 3000
+}
