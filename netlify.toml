@@ -3,14 +3,19 @@ publish = "dist"
 command = "npm run build"
 
 [build.environment]
-NODE_VERSION = "20"
-
-[[redirects]]
-from = "/.well-known/*"
-to = "/.well-known/:splat"
-status = 200
+NODE_VERSION = "24"
 
 [[redirects]]
 from = "/*"
 to = "/index.html"
+status = 200
+
+[[redirects]]
+from = "/what_is_quantum_computing/*"
+to = "/slides/dest/what_is_quantum_computing/index.html"
+status = 200
+
+[[redirects]]
+from = "/test/*"
+to = "/slides/dest/test/index.html"
 status = 200
