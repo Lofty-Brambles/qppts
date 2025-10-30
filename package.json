@@ -3,7 +3,7 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "build": "slidev build slides/*.md",
+        "build": "bash build.sh",
         "export": "slidev export slides/*.md",
         "dev": "slidev --open"
     },
