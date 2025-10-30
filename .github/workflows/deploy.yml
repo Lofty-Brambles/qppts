@@ -27,7 +27,7 @@ jobs:
             - name: Install dependencies
               run: nci -P
             - name: Build
-              run: nr build
+              run: nr build "${{github.event.repository.name}}"
             - name: Setup Pages
               uses: actions/configure-pages@v4
             - uses: actions/upload-pages-artifact@v3
