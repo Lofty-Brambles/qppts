@@ -32,7 +32,7 @@ jobs:
               run: nci && nlx install playwright
 
             - name: Build
-              run: nr build --base /${{github.event.repository.name}}/ --emptyOutDir
+              run: nr build --base /${{github.event.repository.name}}/
 
             - name: Setup Pages
               uses: actions/configure-pages@v4
