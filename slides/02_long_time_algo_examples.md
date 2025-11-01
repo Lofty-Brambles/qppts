@@ -1,7 +1,7 @@
 ---
 theme: academic
 layout: cover
-title: What is Quantum Computing, essentially?
+title: Long-term algorithms (HHL, primarily)
 drawings:
     persist: true
 transition: slide-left
@@ -9,4 +9,6 @@ mdc: true
 coverAuthor: Prantik
 ---
 
-# What is Quantum Computing, essentially?
+# Long-term algorithms (HHL, primarily)
+
+---
