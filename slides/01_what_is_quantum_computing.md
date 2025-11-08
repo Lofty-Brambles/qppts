@@ -117,7 +117,7 @@ Of all the service providers, a few narrowed down, provide popular services. Hon
 ---
 transition: slide-left
 layout: figure-side
-figureUrl: /final_stack.png
+figureUrl: /what_is_quantum_computing/final_stack.png
 ---
 
 # Overall Decisions
