@@ -5,3 +5,4 @@ for file in $(ls slides/*.md | sed 's/slides\/\|\.md//g'); do
 done
 
 cp base.html dist/index.html
+cp applications.html dist/applications.html
