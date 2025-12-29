@@ -134,56 +134,33 @@
         </main>
         <script type="module">
             const markedContent = `
-# Materials
+            # Possible places of Applications of Quantum Computing
 
-## Presentations
+            ## Usage in Flutter prediction [Aeroelasticity]
 
-1. [**What is Quantum Computing?**](https://lofty-brambles.github.io/qppts/01_what_is_quantum_computing)
-   - Core concepts: qubits, superposition, entanglement, quantum interference
-   - Quantum gates and their implementations
-   - Comparison of quantum frameworks (Qiskit, Cirq, Q#, Quipper)
-   - Analysis of quantum service providers (IBM Quantum, AWS Braket, Azure Quantum)
-   - Performance comparisons for linear systems and ODEs/PDEs
-   - Quantum algorithms applied to CFD: HHL algorithm, Quantum Lattice Boltzmann Method
+            - Currently, certain numerical methods are being used alongside Reduced-Order Modelling: http://oddjob.utias.utoronto.ca/dwz/Miscellaneous/LoweZingg2022_FinalManuscript.pdf
+            - However, with the application of ROM + quantum algos, we can speed up as system can be sparsely represented on linearization.
+            - Need to check variational solvers and their boundary conditions for this.
+            - Read?: https://ntrs.nasa.gov/api/citations/20200002364/downloads/20200002364.pdf
 
-2. [**Quantum Operations**](https://lofty-brambles.github.io/qppts/02_quantum_operations)
-   - Mathematical foundations: bra-ket notation, Bloch sphere representation
-   - Single and multi-qubit operations
-   - Universal quantum gate sets (H, T, CNOT)
-   - Quantum circuit design and implementation
-   - Pauli operators, Hadamard, CNOT, SWAP, and Toffoli gates
+            ## Thermal systems [Heat transfer] over surfaces
 
-## Algorithms Covered by Python Notebooks
+            - The fundamental equation is a PDE: ∂T/∂t = α ∇²T. Discretizing using FDM or FEM leads to large linear systems.
+            - This is currently being solved iteratively with Model Reduction techniques.
+            - Check the conditionality or sparsity of the matrix formed - see if they can be reduced.
 
-The notebooks are all linked here: [GitHub Repository](https://lofty-brambles.github.io/qppts/02_quantum_operations/1)
+            ## Time-series usage of it in CFD [Shock-wave/Boundary layer interaction]
 
-1. Basic Quantum Gates and Circuits
-   - Single qubit gate: H, Z
-   - Multi-qubit gate: SWAP
-   - Circuit construction and visualization
+            - Ref: John D Anderson Jr - Pg. 1037
+            - Courant-Friedrichs-Lewy Constraint states that time-setp gets bound by Δx/c, so is very small for where boundary layers are being considered.
+            - Overall, only neighboring points are interactng in a CV, so the martrix becomes sparse. 
+            - Problem lies in conditioning of the matrix, which needs to be checked.
 
-2. HHL Algorithm for Solving Linear Systems
-   - Quantum phase estimation
-   - Controlled rotations
-   - Inverse quantum Fourier transform
-   - Application to sparse linear systems
+            ## Acoustics/Noise reduction [Helmholtz equation]
 
-## Key References and Sources for Further Studying?
-
-1. [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2022.914241/full) - Quantum Computing for PDEs
-2. [Quantum Journal](https://quantum-journal.org/papers/q-2025-06-17-1770/pdf/) - ODEs using Padé Approximation
-
-1. [NISQ Quantum CFD](https://github.com/comp-physics/NISQ-Quantum-CFD) - Evaluating incompressible NSE on noisy quantum hardware
-
-1. [Nielsen & Chuang: Quantum Computation and Quantum Information](https://profmcruz.wordpress.com/wp-content/uploads/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf)
-2. [Quantum Algorithm Zoo](https://quantumalgorithmzoo.org/)
-3. [ZX Calculus](https://arxiv.org/pdf/2012.13966) - Graphical language for quantum circuits
-
-## Next Steps
-- Further look into error mitigation techniques
-- Further look into where this can be applied in different areas.
-- Look if these can be tolerably implemented.
-    `;
+            - Best papers I've found that discuss solutions to this are: https://journaljamcs.com/index.php/JAMCS/article/view/1475
+            - Relevant Maths read: https://fse.studenttheses.ub.rug.nl/16437/1/Harmen_Stoppels_2018_TWM.pdf
+            `;
 
             import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
             document.querySelector("main").innerHTML +=
