@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resource Documentation</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+        />
+        <script defer>
+            /*!
+             * Minimal theme switcher
+             *
+             * Pico.css - https://picocss.com
+             * Copyright 2019-2024 - Licensed under MIT
+             */
+
+            const themeSwitcher = {
+                // Config
+                _scheme: "auto",
+                menuTarget: "details.dropdown",
+                buttonsTarget: "a[data-theme-switcher]",
+                buttonAttribute: "data-theme-switcher",
+                rootAttribute: "data-theme",
+                localStorageKey: "picoPreferredColorScheme",
+
+                // Init
+                init() {
+                    this.scheme = this.schemeFromLocalStorage;
+                    this.initSwitchers();
+                    console.log(
+                        `🌗  Theme switcher initialized: ${this.scheme} mode`,
+                    );
+                },
+
+                // Get color scheme from local storage
+                get schemeFromLocalStorage() {
+                    return (
+                        window.localStorage?.getItem(this.localStorageKey) ??
+                        this._scheme
+                    );
+                },
+
+                // Preferred color scheme
+                get preferredColorScheme() {
+                    return window.matchMedia("(prefers-color-scheme: dark)")
+                        .matches
+                        ? "dark"
+                        : "light";
+                },
+
+                // Init switchers
+                initSwitchers() {
+                    const buttons = document.querySelectorAll(
+                        this.buttonsTarget,
+                    );
+                    console.log(
+                        `🔍 Looking for: "${this.buttonsTarget}", Found: ${buttons.length} buttons`,
+                    );
+                    console.log(buttons);
+                    buttons.forEach((button) => {
+                        button.addEventListener(
+                            "click",
+                            (event) => {
+                                event.preventDefault();
+                                // Set scheme
+                                this.scheme = button.getAttribute(
+                                    this.buttonAttribute,
+                                );
+                                // Close dropdown
+                                document
+                                    .querySelector(this.menuTarget)
+                                    ?.removeAttribute("open");
+                            },
+                            false,
+                        );
+                    });
+                },
+
+                // Set scheme
+                set scheme(scheme) {
+                    if (scheme == "auto") {
+                        this._scheme = this.preferredColorScheme;
+                    } else if (scheme == "dark" || scheme == "light") {
+                        this._scheme = scheme;
+                    }
+                    this.applyScheme();
+                    this.schemeToLocalStorage();
+                },
+
+                // Get scheme
+                get scheme() {
+                    return this._scheme;
+                },
+
+                // Apply scheme
+                applyScheme() {
+                    document
+                        .querySelector("html")
+                        ?.setAttribute(this.rootAttribute, this.scheme);
+                },
+
+                // Store scheme to local storage
+                schemeToLocalStorage() {
+                    window.localStorage?.setItem(
+                        this.localStorageKey,
+                        this.scheme,
+                    );
+                },
+            };
+
+            // Init
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", () =>
+                    themeSwitcher.init(),
+                );
+            } else {
+                themeSwitcher.init();
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <nav>
+                <ul></ul>
+                <ul>
+                    <li><strong>Themes: </strong></li>
+                    <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                    <li><a href="#" data-theme-switcher="light">Light</a></li>
+                    <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+                </ul>
+            </nav>
+        </main>
+        <script type="module">
+            const markedContent = `
+# Materials
+
+## Presentations
+
+1. [**What is Quantum Computing?**](https://lofty-brambles.github.io/qppts/01_what_is_quantum_computing)
+   - Core concepts: qubits, superposition, entanglement, quantum interference
+   - Quantum gates and their implementations
+   - Comparison of quantum frameworks (Qiskit, Cirq, Q#, Quipper)
+   - Analysis of quantum service providers (IBM Quantum, AWS Braket, Azure Quantum)
+   - Performance comparisons for linear systems and ODEs/PDEs
+   - Quantum algorithms applied to CFD: HHL algorithm, Quantum Lattice Boltzmann Method
+
+2. [**Quantum Operations**](https://lofty-brambles.github.io/qppts/02_quantum_operations)
+   - Mathematical foundations: bra-ket notation, Bloch sphere representation
+   - Single and multi-qubit operations
+   - Universal quantum gate sets (H, T, CNOT)
+   - Quantum circuit design and implementation
+   - Pauli operators, Hadamard, CNOT, SWAP, and Toffoli gates
+
+## Algorithms Covered by Python Notebooks
+
+The notebooks are all linked here: [GitHub Repository](https://lofty-brambles.github.io/qppts/02_quantum_operations/1)
+
+1. Basic Quantum Gates and Circuits
+   - Single qubit gate: H, Z
+   - Multi-qubit gate: SWAP
+   - Circuit construction and visualization
+
+2. HHL Algorithm for Solving Linear Systems
+   - Quantum phase estimation
+   - Controlled rotations
+   - Inverse quantum Fourier transform
+   - Application to sparse linear systems
+
+## Key References and Sources for Further Studying?
+
+1. [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2022.914241/full) - Quantum Computing for PDEs
+2. [Quantum Journal](https://quantum-journal.org/papers/q-2025-06-17-1770/pdf/) - ODEs using Padé Approximation
+
+1. [NISQ Quantum CFD](https://github.com/comp-physics/NISQ-Quantum-CFD) - Evaluating incompressible NSE on noisy quantum hardware
+
+1. [Nielsen & Chuang: Quantum Computation and Quantum Information](https://profmcruz.wordpress.com/wp-content/uploads/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf)
+2. [Quantum Algorithm Zoo](https://quantumalgorithmzoo.org/)
+
+## Next Steps
+- Further look into error mitigation techniques
+- Further look into where this can be applied in different areas.
+- Look if these can be tolerably implemented.
+    `;
+
+            import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+            document.querySelector("main").innerHTML +=
+                marked.parse(markedContent);
+        </script>
+    </body>
+</html>
