@@ -134,32 +134,32 @@
         </main>
         <script type="module">
             const markedContent = `
-            # Possible places of Applications of Quantum Computing
+# Possible places of Applications of Quantum Computing
 
-            ## Usage in Flutter prediction [Aeroelasticity]
+## Usage in Flutter prediction [Aeroelasticity]
 
-            - Currently, certain numerical methods are being used alongside Reduced-Order Modelling: http://oddjob.utias.utoronto.ca/dwz/Miscellaneous/LoweZingg2022_FinalManuscript.pdf
-            - However, with the application of ROM + quantum algos, we can speed up as system can be sparsely represented on linearization.
-            - Need to check variational solvers and their boundary conditions for this.
-            - Read?: https://ntrs.nasa.gov/api/citations/20200002364/downloads/20200002364.pdf
+- Currently, certain numerical methods are being used alongside Reduced-Order Modelling: http://oddjob.utias.utoronto.ca/dwz/Miscellaneous/LoweZingg2022_FinalManuscript.pdf
+- However, with the application of ROM + quantum algos, we can speed up as system can be sparsely represented on linearization.
+- Need to check variational solvers and their boundary conditions for this.
+- Read?: https://ntrs.nasa.gov/api/citations/20200002364/downloads/20200002364.pdf
 
-            ## Thermal systems [Heat transfer] over surfaces
+## Thermal systems [Heat transfer] over surfaces
 
-            - The fundamental equation is a PDE: ∂T/∂t = α ∇²T. Discretizing using FDM or FEM leads to large linear systems.
-            - This is currently being solved iteratively with Model Reduction techniques.
-            - Check the conditionality or sparsity of the matrix formed - see if they can be reduced.
+- The fundamental equation is a PDE: ∂T/∂t = α ∇²T. Discretizing using FDM or FEM leads to large linear systems.
+- This is currently being solved iteratively with Model Reduction techniques.
+- Check the conditionality or sparsity of the matrix formed - see if they can be reduced.
 
-            ## Time-series usage of it in CFD [Shock-wave/Boundary layer interaction]
+## Time-series usage of it in CFD [Shock-wave/Boundary layer interaction]
 
-            - Ref: John D Anderson Jr - Pg. 1037
-            - Courant-Friedrichs-Lewy Constraint states that time-setp gets bound by Δx/c, so is very small for where boundary layers are being considered.
-            - Overall, only neighboring points are interactng in a CV, so the martrix becomes sparse. 
-            - Problem lies in conditioning of the matrix, which needs to be checked.
+- Ref: John D Anderson Jr - Pg. 1037
+- Courant-Friedrichs-Lewy Constraint states that time-setp gets bound by Δx/c, so is very small for where boundary layers are being considered.
+- Overall, only neighboring points are interactng in a CV, so the martrix becomes sparse. 
+- Problem lies in conditioning of the matrix, which needs to be checked.
 
-            ## Acoustics/Noise reduction [Helmholtz equation]
+## Acoustics/Noise reduction [Helmholtz equation]
 
-            - Best papers I've found that discuss solutions to this are: https://journaljamcs.com/index.php/JAMCS/article/view/1475
-            - Relevant Maths read: https://fse.studenttheses.ub.rug.nl/16437/1/Harmen_Stoppels_2018_TWM.pdf
+- Best papers I've found that discuss solutions to this are: https://journaljamcs.com/index.php/JAMCS/article/view/1475
+- Relevant Maths read: https://fse.studenttheses.ub.rug.nl/16437/1/Harmen_Stoppels_2018_TWM.pdf
             `;
 
             import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
