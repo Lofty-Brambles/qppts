@@ -6,3 +6,4 @@ done
 
 cp base.html dist/index.html
 cp applications.html dist/applications.html
+cp Quantum_Physics-Informed_Neural_Networks.pdf dist/Quantum_Physics-Informed_Neural_Networks.pdf
