@@ -153,10 +153,10 @@
    - Quantum circuit design and implementation
    - Pauli operators, Hadamard, CNOT, SWAP, and Toffoli gates
 
-3.  [**Possible Applications of Quantum Computing**](https://lofty-brambles.github.io/qppts/applications)
+3. [**Possible Applications of Quantum Computing**](https://lofty-brambles.github.io/qppts/applications)
    - Potential applications in fluid dynamics, aeroelasticity, thermal systems, and acoustics
 
-4.  [**Lid driven cavity problem**](https://lofty-brambles.github.io/qppts/03_lid_driven_cavity_problem)
+4. [**Lid driven cavity problem**](https://lofty-brambles.github.io/qppts/03_lid_driven_cavity_problem)
    - Overview of the lid driven cavity problem
    - Classical solution methods and challenges
    - Possible Quantum approaches to solving the problem
@@ -184,10 +184,14 @@ The notebooks are all linked here: [GitHub Repository](https://lofty-brambles.gi
    - Inverse quantum Fourier transform
    - Application to sparse linear systems
 
-## Key References and Sources for Further Studying?
+3. [Q]PINN implementations
+   - General PINN implementation [4958 params, 600 epochs, 07:18.267039m]
+   - TE-hybrid PINN implementation [466 params, 600 epochs, 16:18.49900m]
+   - The implementations are present in Kaggle notebooks:
+     - [General PINN](https://www.kaggle.com/code/prantikdasiitmds/pinn-lid-cav)
+     - [TE-hybrid PINN](https://www.kaggle.com/code/prantikdasiitmds/te-hybrid-qpinn)
 
-1. [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering/articles/10.3389/fmech.2022.914241/full) - Quantum Computing for PDEs
-2. [Quantum Journal](https://quantum-journal.org/papers/q-2025-06-17-1770/pdf/) - ODEs using Padé Approximation
+## Key References and Sources for Further Studying?
 
 1. [NISQ Quantum CFD](https://github.com/comp-physics/NISQ-Quantum-CFD) - Evaluating incompressible NSE on noisy quantum hardware
 
@@ -195,10 +199,10 @@ The notebooks are all linked here: [GitHub Repository](https://lofty-brambles.gi
 2. [Quantum Algorithm Zoo](https://quantumalgorithmzoo.org/)
 3. [ZX Calculus](https://arxiv.org/pdf/2012.13966) - Graphical language for quantum circuits
 
-## Next Steps
-- Further look into error mitigation techniques
-- Further look into where this can be applied in different areas.
-- Look if these can be tolerably implemented.
+1. TE-QPINNs: https://www.nature.com/articles/s41598-025-02959-z
+2. QC-PINNs: https://iopscience.iop.org/article/10.1088/2632-2153/ae1c91#mlstae1c91s9
+3. Hybrid-approach: https://arxiv.org/html/2503.16678v1#S6
+
     `;
 
             import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
