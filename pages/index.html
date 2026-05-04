@@ -185,10 +185,13 @@ The notebooks are all linked here: [GitHub Repository](https://lofty-brambles.gi
    - Application to sparse linear systems
 
 3. [Q]PINN implementations
-   - General PINN implementation [4958 params, 600 epochs, 07:18.267039m]
+   - [General PINN implementation](https://www.kaggle.com/code/prantikdasiitmds/pinn-lid-cav)
+     - 21122 total params + some meta params
+     - 4000 + 2000 epochs
+     - [No derivative pred time]: 0.996 +/- 0.018 ms (min=0.978, max=1.053, runs=30, points=10000)
+     - [With derivative pred time]: 20.992 +/- 0.485 ms (min=20.425, max=21.876, runs=30, points=10000)
    - TE-hybrid PINN implementation [466 params, 600 epochs, 16:18.49900m]
    - The implementations are present in Kaggle notebooks:
-     - [General PINN](https://www.kaggle.com/code/prantikdasiitmds/pinn-lid-cav)
      - [TE-hybrid PINN](https://www.kaggle.com/code/prantikdasiitmds/te-hybrid-qpinn)
 
 ## Key References and Sources for Further Studying?
