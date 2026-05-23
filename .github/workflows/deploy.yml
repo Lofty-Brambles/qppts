@@ -22,12 +22,13 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: "lts/*"
-            - name: Setup @antfu/ni
-              run: npm i -g @antfu/ni
+            - uses: pnpm/action-setup@v4
+              with:
+                  version: 10.19.0
             - name: Install dependencies
-              run: nci -P
+              run: pnpm install --frozen-lockfile
             - name: Build
-              run: nr build "${{github.event.repository.name}}"
+              run: pnpm run build "${{github.event.repository.name}}"
             - name: Setup Pages
               uses: actions/configure-pages@v4
             - uses: actions/upload-pages-artifact@v3

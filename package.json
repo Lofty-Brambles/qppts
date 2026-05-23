@@ -2,6 +2,7 @@
     "name": "qppts",
     "type": "module",
     "private": true,
+    "packageManager": "pnpm@10.19.0",
     "scripts": {
         "build": "bash build.sh",
         "export": "slidev export slides/*.md",
