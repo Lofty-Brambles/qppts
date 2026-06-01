@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+base_prefix="${1:-}"
+
 escape_html() {
     sed \
         -e 's/&/\&amp;/g' \
@@ -149,11 +151,11 @@ EOF
 }
 
 for file in $(ls slides/*.md | sed 's/slides\/\|\.md//g'); do
-    slidev build "./slides/${file}.md" --base "/$1/${file}/" --out "../dist/${file}/"
-done
-
-for file in $(ls pages/*.html | sed 's/pages\/\|\.html//g'); do
-    cp "./pages/${file}.html" "dist/${file}.html"
+    slide_base="/${file}/"
+    if [ -n "$base_prefix" ]; then
+        slide_base="/${base_prefix}/${file}/"
+    fi
+    slidev build "./slides/${file}.md" --base "$slide_base" --out "../dist/${file}/"
 done
 
 for markdown_file in pages/*.md; do
