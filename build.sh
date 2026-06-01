@@ -150,6 +150,19 @@ EOF
 EOF
 }
 
+extract_markdown_title() {
+    local input_file="$1"
+    local fallback_title="$2"
+    local title=""
+
+    title="$(sed -n 's/^[[:space:]]*#\{1,6\}[[:space:]]\+\(.*\)[[:space:]]*$/\1/p' "$input_file" | head -n 1)"
+    if [ -n "$title" ]; then
+        printf '%s\n' "$title"
+    else
+        printf '%s\n' "$fallback_title"
+    fi
+}
+
 for file in $(ls slides/*.md | sed 's/slides\/\|\.md//g'); do
     slide_base="/${file}/"
     if [ -n "$base_prefix" ]; then
@@ -161,7 +174,8 @@ done
 for markdown_file in pages/*.md; do
     [ -e "$markdown_file" ] || continue
     file_name="$(basename "$markdown_file" .md)"
-    render_markdown_page "$markdown_file" "dist/${file_name}.html" "$file_name"
+    page_title="$(extract_markdown_title "$markdown_file" "$file_name")"
+    render_markdown_page "$markdown_file" "dist/${file_name}.html" "$page_title"
 done
 
 cp Quantum_Physics-Informed_Neural_Networks.pdf dist/Quantum_Physics-Informed_Neural_Networks.pdf
