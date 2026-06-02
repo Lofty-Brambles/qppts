@@ -57,6 +57,9 @@ The notebooks are all linked here: [GitHub Repository](https://github.com/Lofty-
         - 500 + 250 epochs
         - [No derivative pred time]: 43.168 +/- 1.905 ms (min=40.493, max=49.225, runs=30, points=10000)
         - [With derivative pred time]: 1790.258 +/- 27.446 ms (min=1734.754, max=1865.329, runs=30, points=10000)
+    - [Hybrid QPINN](https://github.com/Lofty-Brambles/qsnippets/blob/main/06_explore_qpinns/te-qpinns/hybrid-qpinn.ipynb) [ NO PRED times ]
+        - 262 total params + some meta params
+        - 1000 + 25 epochs
 
 ## Key References and Sources for Further Studying?
 
