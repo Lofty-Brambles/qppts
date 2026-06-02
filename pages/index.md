@@ -2,7 +2,7 @@
 
 ## Presentations
 
-1. [**What is Quantum Computing?**](/01_what_is_quantum_computing)
+1. [**What is Quantum Computing?**](/qppts/01_what_is_quantum_computing)
     - Core concepts: qubits, superposition, entanglement, quantum interference
     - Quantum gates and their implementations
     - Comparison of quantum frameworks (Qiskit, Cirq, Q#, Quipper)
@@ -10,7 +10,7 @@
     - Performance comparisons for linear systems and ODEs/PDEs
     - Quantum algorithms applied to CFD: HHL algorithm, Quantum Lattice Boltzmann Method
 
-2. [**Quantum Operations**](/02_quantum_operations)
+2. [**Quantum Operations**](/qppts/02_quantum_operations)
     - Mathematical foundations: bra-ket notation, Bloch sphere representation
     - Single and multi-qubit operations
     - Universal quantum gate sets (H, T, CNOT)
@@ -18,13 +18,13 @@
     - Pauli operators, Hadamard, CNOT, SWAP, and Toffoli gates
 
 
-3. [**Lid driven cavity problem**](/03_lid_driven_cavity_problem)
+3. [**Lid driven cavity problem**](/qppts/03_lid_driven_cavity_problem)
     - Overview of the lid driven cavity problem
     - Classical solution methods and challenges
     - Possible Quantum approaches to solving the problem
     - Comparison of the methods discussed
 
-4. [**Using Quantum Algorithms for PINNs**](/04_using_quantum_algos_for_pinns)
+4. [**Using Quantum Algorithms for PINNs**](/qppts/04_using_quantum_algos_for_pinns)
     - Introduction to Quantum Physics-Informed Neural Networks (QPINNs)
     - Variational Quantum Algorithms for solving PDEs
     - "Hybrid" PINNs: Combining classical and quantum approaches
@@ -60,7 +60,7 @@ The notebooks are all linked here: [GitHub Repository](https://github.com/Lofty-
 
 ## Key References and Sources for Further Studying?
 
-1. [Papers collection](/papers)
+1. [Papers collection](/qppts/papers)
 1. [NISQ Quantum CFD](https://github.com/comp-physics/NISQ-Quantum-CFD) - Evaluating incompressible NSE on noisy quantum hardware
 
 1. [Nielsen & Chuang: Quantum Computation and Quantum Information](https://profmcruz.wordpress.com/wp-content/uploads/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf)
