@@ -13,5 +13,10 @@
     - [ ] [Code](https://github.com/GeetRakala/QPINN/blob/main/qpinn.ipynb)
 - [ ] Transfer Learning in QPINNs - what kind of networks may exist. _Mari, A., Bromley, T. R., Izaac, J., Schuld, M., & Killoran, N. (2020). Transfer learning in hybrid classical-quantum neural networks. Quantum, 4, 340. https://doi.org/10.22331/q-2020-10-09-340_
 - [ ] Transfer Learning in PINNs with LoRA. _Wang, Y., Bai, J., Eshaghi, M. S., Anitescu, C., Zhuang, X., Rabczuk, T., & Liu, Y. (2025). Transfer Learning in Physics-Informed Neural Networks: Full Fine-Tuning, Lightweight Fine-Tuning, and Low-Rank Adaptation. https://arxiv.org/abs/2502.00782_
+    - [ ] [Code](https://github.com/yizheng-wang/Research-on-Solving-Partial-Differential-Equations-of-Solid-Mechanics-Based-on-PINN) Check the Taylor Green part
 - [ ] Summary of QPINNs and papers till 2026. _Amaral, C.A., Oliveira, V.L., Salazar, J.P.L.C. et al. A Review of Quantum Machine Learning and Quantum-inspired Applied Methods to Computational Fluid Dynamics. Braz J Phys 56, 39 (2026). https://doi.org/10.1007/s13538-025-01959-8_
     - [ ] [Code](https://github.com/cammaral/quantum_and_cfd/)
+- PFET (LoRA) in PINNS:
+    - [ ] Basic LoRA impl in PyTorch: *https://sahaj.ai/exploring-lora-part-2-analyzing-lora-through-its-implementation-on-an-mlp/*
+    - [ ] List of Adapters as per HuggingFace documentation of PFET: *https://huggingface.co/docs/peft/en/conceptual_guides/adapter* [Citation as below]
+    - [ ] HuggingFace library citation: *Mangrulkar, S., Gugger, S., Debut, L., Belkada, Y., Paul, S., Bossan, B., & Tietz, M. (2022). PEFT: State-of-the-art Parameter-Efficient Fine-Tuning methods. https://github.com/huggingface/peft*
