@@ -142,6 +142,13 @@ EOF
         <script type="module">
             import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
+            const renderer = {
+                checkbox(checked) {
+                    return `<input type="checkbox" ${checked ? 'checked' : ''} >`;
+                }
+            };
+            marked.use({ renderer });
+
             const markedContent = document.querySelector("#markdown-source")?.value ?? "";
             document.querySelector("main").innerHTML += marked.parse(markedContent);
         </script>

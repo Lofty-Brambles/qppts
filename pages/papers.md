@@ -1,5 +1,17 @@
-# Papers to reference
+# Papers and Code Alongside
 
-- [ ] Test 1
-- [ ] Test 2
-- [ ] Test 3
+- [ ] Hybrid QPINN on Burgers, spring, Poissons. **Tf Benchmarks** on layers, qubits, etc. _Trahan, C.; Loveland, M.; Dent, S. Quantum Physics-Informed Neural Networks. Entropy 2024, 26, 649. https://doi.org/10.3390/e26080649_
+    - [ ] [Code](https://github.com/trahancj/QPINNs.git) (only spring and burgers)
+- [ ] Trainable Embedding **QPINN** on NSE, small circuit for good results. Not sure how they got these numbers. Might have to run code to understand. _Berger, S., Hosters, N. & Möller, M. Trainable embedding quantum physics informed neural networks for solving nonlinear PDEs. Sci Rep 15, 18823 (2025). https://doi.org/10.1038/s41598-025-02959-z_
+    - [ ] [Code](https://git.rwth-aachen.de/berger.st.11.11/te-qpinns/-/blob/main/PDE-Example/LidDrivenCavity/lid_driven_cavity_stream_QPINN.py?ref_type=heads)
+- [ ] DQC based QPINN on Convergent-Divergent Nozzle. Not in depth on the example part. _Kyriienko, O., Paine, A. E., & Elfving, V. E. (2021). Solving nonlinear differential equations with differentiable quantum circuits. Phys. Rev. A, 103(5), 052416. https://doi.org/10.1103/PhysRevA.103.052416_
+- [ ] Both Continuous and Discrete Variable QPINN are benchmarked for Helmholtz, 2D lid cav and wave equations. _Afrah Farea et al 2025 Mach. Learn.: Sci. Technol. 6 045053. https://doi.org/10.1088/2632-2153/ae1c91_
+    - [ ] [Code](https://github.com/afrah/QCPINN/blob/main/src/nn/CVQuantumLayer.py) [Check the discrete layer circuits]
+- [ ] Hybrid QPINN for a cylinder flow/Y-shaped mixture flow. _Alexandr Sedykh et al 2024 Mach. Learn.: Sci. Technol. 5 025045. https://doi.org/10.1088/2632-2153/ad43b2_
+- [ ] Base maths, gate basics for Quantum circuit in QPINN. _Dehaghani, N. B., Aguiar, A. P., & Wisniewski, R. (2024). A Hybrid Quantum-Classical Physics-Informed Neural Network Architecture for Solving Quantum Optimal Control Problems. https://arxiv.org/abs/2404.15015_
+- [ ] QPINN for 1D Cylinder wake flow. _M. Raissi, P. Perdikaris, G.E. Karniadakis, Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations, Journal of Computational Physics, Volume 378, 2019, Pages 686-707, ISSN 0021-9991, https://doi.org/10.1016/j.jcp.2018.10.045._
+    - [ ] [Code](https://github.com/GeetRakala/QPINN/blob/main/qpinn.ipynb)
+- [ ] Transfer Learning in QPINNs - what kind of networks may exist. _Mari, A., Bromley, T. R., Izaac, J., Schuld, M., & Killoran, N. (2020). Transfer learning in hybrid classical-quantum neural networks. Quantum, 4, 340. https://doi.org/10.22331/q-2020-10-09-340_
+- [ ] Transfer Learning in PINNs with LoRA. _Wang, Y., Bai, J., Eshaghi, M. S., Anitescu, C., Zhuang, X., Rabczuk, T., & Liu, Y. (2025). Transfer Learning in Physics-Informed Neural Networks: Full Fine-Tuning, Lightweight Fine-Tuning, and Low-Rank Adaptation. https://arxiv.org/abs/2502.00782_
+- [ ] Summary of QPINNs and papers till 2026. _Amaral, C.A., Oliveira, V.L., Salazar, J.P.L.C. et al. A Review of Quantum Machine Learning and Quantum-inspired Applied Methods to Computational Fluid Dynamics. Braz J Phys 56, 39 (2026). https://doi.org/10.1007/s13538-025-01959-8_
+    - [ ] [Code](https://github.com/cammaral/quantum_and_cfd/)

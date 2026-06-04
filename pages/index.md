@@ -17,7 +17,6 @@
     - Quantum circuit design and implementation
     - Pauli operators, Hadamard, CNOT, SWAP, and Toffoli gates
 
-
 3. [**Lid driven cavity problem**](/qppts/03_lid_driven_cavity_problem)
     - Overview of the lid driven cavity problem
     - Classical solution methods and challenges
