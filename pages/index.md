@@ -45,7 +45,7 @@ The notebooks are all linked here: [GitHub Repository](https://github.com/Lofty-
     - Inverse quantum Fourier transform
     - Application to sparse linear systems
 
-3. [Q]PINN implementations
+3. [Q]PINN implementations (2D Lid-Cavity problem)
     - [General PINN implementation](https://www.kaggle.com/code/prantikdasiitmds/pinn-lid-cav)
         - 21122 total params + some meta params
         - 4000 + 2000 epochs
@@ -59,6 +59,12 @@ The notebooks are all linked here: [GitHub Repository](https://github.com/Lofty-
     - [Hybrid QPINN](https://github.com/Lofty-Brambles/qsnippets/blob/main/06_explore_qpinns/te-qpinns/hybrid-qpinn.ipynb) [ NO PRED times ]
         - 262 total params + some meta params
         - 1000 + 25 epochs
+
+4. [Q]PINN implementations (CD-Nozzle problem)
+    - [General PINN implementation](https://www.kaggle.com/code/prantikdasiitmds/cd-nozzle-pinn)
+        - 133380 total params + some meta params
+        - 4000 + 300 epochs
+    - [ADD-PINN implementation around shock, with shock layer as parameter](https://www.kaggle.com/code/prantikdasiitmds/cd-nozzle-addpinn)
 
 ## Key References and Sources for Further Studying?
 
