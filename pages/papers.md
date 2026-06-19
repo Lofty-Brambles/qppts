@@ -34,6 +34,9 @@
 - [ ] ID-PINNs, similar to what I did for domain decomposition, no CD-nozzle impl, basically enforces interface conditions _Chenhao Si, Ming Yan, Initialization-enhanced physics-informed neural network with domain decomposition (IDPINN), Journal of Computational Physics, Volume 530, 2025, 113914, ISSN 0021-9991, https://doi.org/10.1016/j.jcp.2025.113914._
 - [x] Structure for paper on a specific problem, implementing a solution. _Aslam, M.N., Shaukat, N., Riaz, A. et al. Nano-fluid flow predictions in convergent/divergent channels using ANN-BLMT and physics-informed neural networks. J Therm Anal Calorim 150, 7029–7047 (2025). https://doi.org/10.1007/s10973-024-13628-0_
 - [ ] Benchmarking classical approaches to PINNs. _Wenbo Cao, Jiahao Song, Weiwei Zhang; A solver for subsonic flow around airfoils based on physics-informed neural networks and mesh transformation. Physics of Fluids 1 February 2024; 36 (2): 027134. https://doi.org/10.1063/5.0188665_
+- [ ] Comparisons of different approaches to capture shocks _Jassem Abbasi, Ameya D. Jagtap, Ben Moseley, Aksel Hiorth, Pål Østebø Andersen, Challenges and advancements in modeling shock fronts with physics-informed neural networks: A review and benchmarking study, Neurocomputing, Volume 657, 2025, 131440, ISSN 0925-2312, https://doi.org/10.1016/j.neucom.2025.131440._
+- [ ] Causality is all you need. Why causal weights are important in PINNs. _Sifan Wang, Shyam Sankaran, Paris Perdikaris, Respecting causality for training physics-informed neural networks, Computer Methods in Applied Mechanics and Engineering, Volume 421, 2024, 116813, ISSN 0045-7825, https://doi.org/10.1016/j.cma.2024.116813._
+- [x] ADD-PINNs. _Ka, Eunhan & Leclercq, Ludovic & Ukkusuri, Satish. (2026). Adaptive Domain Decomposition Physics-Informed Neural Networks for Traffic State Estimation with Sparse Sensor Data. 10.2139/ssrn.6712944._
 
 ## Gists
 
@@ -44,4 +47,21 @@ Dolean2023, challenges remain:
 - Training costs remain high for large-scale or highly discontinuous problems.
 - Most nozzle-specific studies focus on one-dimensional or simplified geometries; full three-dimensional turbulent flows remain less explored.
 - While some studies demonstrate mesh-free advantages over traditional CFD solvers—especially regarding parametric studies or inverse design—the overall maturity of these methods is still developing compared to established finite volume/element approaches
-- Transfer learning to speed up training in PINNs, especially across ADD-PINNs.
+- Transfer learning to speed up training in PINNs, especially across ADD-PINNs. (https://github.com/yizheng-wang/Research-on-Solving-Partial-Differential-Equations-of-Solid-Mechanics-Based-on-PINN/blob/main/Transfer_learning_PINNs/PINNs_strong_form/Taylor_green/Green_vortex_arbitatary_w_PINN_lora.py)
+
+## Journal comparisons
+
+| Journal                                 | Why best fit                                                                       |
+| --------------------------------------- | ---------------------------------------------------------------------------------- |
+| Physics of Fluids                       | Lots of PINN papers, CFD papers                                                    |
+| Journal of Computational Physics        | Lots of numerical methods, CFD, domain decomposition and PINNs. Raissi et al. here |
+| Engg. Appls. of Artificial Intelligence | More on AI, algo, practical and benchmarking                                       |
+| Scientific Reports                      | Includes everything, not focused, but other cd nozzle study is here                |
+
+## Maybe points
+
+- [ ] Explain algorithm in this case, with background
+- [ ] Put up first graph of loss in both NNs, show the curves with respect to references
+- [ ] Compare the minimum number of epochs/time taken [ since activation functions, layers distribution are studied ]
+- [ ] Benchmark with classical networks on the same problem.
+- [ ] Transfer learning with differing params? Atleast on the initial network, with LoRA
