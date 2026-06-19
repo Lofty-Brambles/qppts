@@ -19,4 +19,29 @@
 - PFET (LoRA) in PINNS:
     - [ ] Basic LoRA impl in PyTorch: *https://sahaj.ai/exploring-lora-part-2-analyzing-lora-through-its-implementation-on-an-mlp/*
     - [ ] List of Adapters as per HuggingFace documentation of PFET: *https://huggingface.co/docs/peft/en/conceptual_guides/adapter* [Citation as below]
-    - [ ] HuggingFace library citation: *Mangrulkar, S., Gugger, S., Debut, L., Belkada, Y., Paul, S., Bossan, B., & Tietz, M. (2022). PEFT: State-of-the-art Parameter-Efficient Fine-Tuning methods. https://github.com/huggingface/peft*
+    - [ ] HuggingFace library citation: _Mangrulkar, S., Gugger, S., Debut, L., Belkada, Y., Paul, S., Bossan, B., & Tietz, M. (2022). PEFT: State-of-the-art Parameter-Efficient Fine-Tuning methods. https://github.com/huggingface/peft_
+
+## PINN
+
+- [ ] Summary of PgNN, PiNN, PeNN, and NO, what they achieve. _Faroughi, S. A., Pawar, N. M., Fernandes, C., Raissi, M., Das, S., Kalantari, N. K., and Kourosh Mahjour, S. (January 29, 2024). "Physics-Guided, Physics-Informed, and Physics-Encoded Neural Networks and Operators in Scientific Computing: Fluid and Solid Mechanics." ASME. J. Comput. Inf. Sci. Eng. April 2024; 24(4): 040802. https://doi.org/10.1115/1.4064449_
+- [x] Summary of NN in CFD. Read challenges section. Points 1-4. _Chi Zhao, Feifei Zhang, Wenqiang Lou, Xi Wang, Jianyong Yang; A comprehensive review of advances in physics-informed neural networks and their applications in complex fluid dynamics. Physics of Fluids 1 October 2024; 36 (10): 101301. https://doi.org/10.1063/5.0226562_
+- [x] Deals with building predictions with incomplete BCs and using data to fill gaps, or forward, both. _Zhiping Mao, Ameya D. Jagtap, George Em Karniadakis, Physics-informed neural networks for high-speed flows, Computer Methods in Applied Mechanics and Engineering, Volume 360, 2020, 112789, ISSN 0045-7825, https://doi.org/10.1016/j.cma.2019.112789._
+- [ ] FBPINN - divide like in FEM, then use PINN in each subdomain. _Moseley, B., Markham, A. & Nissen-Meyer, T. Finite basis physics-informed neural networks (FBPINNs): a scalable domain decomposition approach for solving differential equations. Adv Comput Math 49, 62 (2023). https://doi.org/10.1007/s10444-023-10065-9_
+- [ ] APINN - divide after a common NN, into subnetworks, using a single PDE. Computationally should be more expensive. _Zheyuan Hu, Ameya D. Jagtap, George Em Karniadakis, Kenji Kawaguchi, Augmented Physics-Informed Neural Networks (APINNs): A gating network-based soft domain decomposition methodology, Engineering Applications of Artificial Intelligence, Volume 126, Part B, 2023, 107183, ISSN 0952-1976, https://doi.org/10.1016/j.engappai.2023.107183._
+- [x] CD-nozzle problem, with modified activation functions for a better solution. _Ge Jin, Deyou Wang, Pengfei Si, Jiao Liu, Shipeng Li, Ningfei Wang; Improve neural representations with general exponential activation function for high-speed flows. Physics of Fluids 1 December 2024; 36 (12): 126117. https://doi.org/10.1063/5.0239889_
+- [x] PINNs in hyperbolic PDEs, with weights and hard constraints. Good summary. _Ghoreishi M.S. & Naderan H. Physics-informed neural network with weighted loss and hard constraints for hyperbolic conservation laws. Sci Rep (2026). https://doi.org/10.1038/s41598-025-34263-1_
+- [x] PINNs in CD-nozzle problem, with weights and hard constraints. _Liang, H., Song, Z., Zhao, C. et al. Continuous and discontinuous compressible flows in a converging–diverging channel solved by physics-informed neural networks without exogenous data. Sci Rep 14, 3822 (2024). https://doi.org/10.1038/s41598-024-53680-2_
+- [ ] ID-PINNs, similar to what I did for domain decomposition, no CD-nozzle impl, basically enforces interface conditions _Chenhao Si, Ming Yan, Initialization-enhanced physics-informed neural network with domain decomposition (IDPINN), Journal of Computational Physics, Volume 530, 2025, 113914, ISSN 0021-9991, https://doi.org/10.1016/j.jcp.2025.113914._
+- [x] Structure for paper on a specific problem, implementing a solution. _Aslam, M.N., Shaukat, N., Riaz, A. et al. Nano-fluid flow predictions in convergent/divergent channels using ANN-BLMT and physics-informed neural networks. J Therm Anal Calorim 150, 7029–7047 (2025). https://doi.org/10.1007/s10973-024-13628-0_
+- [ ] Benchmarking classical approaches to PINNs. _Wenbo Cao, Jiahao Song, Weiwei Zhang; A solver for subsonic flow around airfoils based on physics-informed neural networks and mesh transformation. Physics of Fluids 1 February 2024; 36 (2): 027134. https://doi.org/10.1063/5.0188665_
+
+## Gists
+
+While domain-decomposed PINNs outperform vanilla PINNs on multi-scale or high-frequency problems
+Dolean2023, challenges remain:
+
+- Interface conditions between subdomains can introduce errors or require careful loss design
+- Training costs remain high for large-scale or highly discontinuous problems.
+- Most nozzle-specific studies focus on one-dimensional or simplified geometries; full three-dimensional turbulent flows remain less explored.
+- While some studies demonstrate mesh-free advantages over traditional CFD solvers—especially regarding parametric studies or inverse design—the overall maturity of these methods is still developing compared to established finite volume/element approaches
+- Transfer learning to speed up training in PINNs, especially across ADD-PINNs.
