@@ -38,6 +38,10 @@
 - [ ] Causality is all you need. Why causal weights are important in PINNs. _Sifan Wang, Shyam Sankaran, Paris Perdikaris, Respecting causality for training physics-informed neural networks, Computer Methods in Applied Mechanics and Engineering, Volume 421, 2024, 116813, ISSN 0045-7825, https://doi.org/10.1016/j.cma.2024.116813._
 - [x] ADD-PINNs. _Ka, Eunhan & Leclercq, Ludovic & Ukkusuri, Satish. (2026). Adaptive Domain Decomposition Physics-Informed Neural Networks for Traffic State Estimation with Sparse Sensor Data. 10.2139/ssrn.6712944._
 
+## Figures and Content
+
+- [Click here for access to figures folder](https://drive.google.com/drive/folders/1SGZYF_KFeizWhFbnwu7BL7Thzbvv57qN?usp=sharing)
+
 ## Gists
 
 While domain-decomposed PINNs outperform vanilla PINNs on multi-scale or high-frequency problems
@@ -48,15 +52,6 @@ Dolean2023, challenges remain:
 - Most nozzle-specific studies focus on one-dimensional or simplified geometries; full three-dimensional turbulent flows remain less explored.
 - While some studies demonstrate mesh-free advantages over traditional CFD solvers—especially regarding parametric studies or inverse design—the overall maturity of these methods is still developing compared to established finite volume/element approaches
 - Transfer learning to speed up training in PINNs, especially across ADD-PINNs. (https://github.com/yizheng-wang/Research-on-Solving-Partial-Differential-Equations-of-Solid-Mechanics-Based-on-PINN/blob/main/Transfer_learning_PINNs/PINNs_strong_form/Taylor_green/Green_vortex_arbitatary_w_PINN_lora.py)
-
-## Journal comparisons
-
-| Journal                                 | Why best fit                                                                       |
-| --------------------------------------- | ---------------------------------------------------------------------------------- |
-| Physics of Fluids                       | Lots of PINN papers, CFD papers                                                    |
-| Journal of Computational Physics        | Lots of numerical methods, CFD, domain decomposition and PINNs. Raissi et al. here |
-| Engg. Appls. of Artificial Intelligence | More on AI, algo, practical and benchmarking                                       |
-| Scientific Reports                      | Includes everything, not focused, but other cd nozzle study is here                |
 
 ## Maybe points
 
