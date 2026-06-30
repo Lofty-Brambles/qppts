@@ -143,7 +143,7 @@ EOF
             import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
             const renderer = {
-                checkbox(checked) {
+                checkbox({ checked }) {
                     return `<input type="checkbox" ${checked ? 'checked' : ''} >`;
                 }
             };
@@ -184,5 +184,7 @@ for markdown_file in pages/*.md; do
     page_title="$(extract_markdown_title "$markdown_file" "$file_name")"
     render_markdown_page "$markdown_file" "dist/${file_name}.html" "$page_title"
 done
+
+esbuild ts/*.ts --bundle --outfile=dist/bundle.js
 
 cp Quantum_Physics-Informed_Neural_Networks.pdf dist/Quantum_Physics-Informed_Neural_Networks.pdf

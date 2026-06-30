@@ -1,3 +1,5 @@
 onlyBuiltDependencies:
-    - esbuild
-    - playwright-chromium
+  - esbuild
+  - playwright-chromium
+  - sharp
+  - workerd

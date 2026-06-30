@@ -12,13 +12,17 @@
         "@slidev/cli": "^52.6.0",
         "@slidev/theme-default": "latest",
         "@slidev/theme-seriph": "latest",
+        "hono": "^4.12.27",
         "slidev-theme-academic": "^2.1.0",
         "vercel": "^54.6.1",
         "vue": "^3.5.22"
     },
     "devDependencies": {
+        "@cloudflare/workers-types": "^4.20260630.1",
+        "esbuild": "0.28.1",
         "playwright-chromium": "^1.56.1",
         "prettier": "^3.6.2",
-        "prettier-plugin-slidev": "^1.0.5"
+        "prettier-plugin-slidev": "^1.0.5",
+        "wrangler": "^4.105.0"
     }
 }

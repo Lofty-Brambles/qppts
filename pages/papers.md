@@ -36,11 +36,8 @@
 - [ ] Benchmarking classical approaches to PINNs. _Wenbo Cao, Jiahao Song, Weiwei Zhang; A solver for subsonic flow around airfoils based on physics-informed neural networks and mesh transformation. Physics of Fluids 1 February 2024; 36 (2): 027134. https://doi.org/10.1063/5.0188665_
 - [ ] Comparisons of different approaches to capture shocks _Jassem Abbasi, Ameya D. Jagtap, Ben Moseley, Aksel Hiorth, Pål Østebø Andersen, Challenges and advancements in modeling shock fronts with physics-informed neural networks: A review and benchmarking study, Neurocomputing, Volume 657, 2025, 131440, ISSN 0925-2312, https://doi.org/10.1016/j.neucom.2025.131440._
 - [ ] Causality is all you need. Why causal weights are important in PINNs. _Sifan Wang, Shyam Sankaran, Paris Perdikaris, Respecting causality for training physics-informed neural networks, Computer Methods in Applied Mechanics and Engineering, Volume 421, 2024, 116813, ISSN 0045-7825, https://doi.org/10.1016/j.cma.2024.116813._
-- [x] ADD-PINNs. _Ka, Eunhan & Leclercq, Ludovic & Ukkusuri, Satish. (2026). Adaptive Domain Decomposition Physics-Informed Neural Networks for Traffic State Estimation with Sparse Sensor Data. 10.2139/ssrn.6712944._
+- [x] ADD-PINNs. _Ka, Eunhan & Leclercq, Ludovic & Ukkusuri, Satish. (2026). Adaptive Domain Decomposition Physics-Informed Neural Networks for Traffic State Estimation with Sparse Sensor Data. https://doi.org/10.2139/ssrn.6712944._
 
-## Figures and Content
-
-- [Click here for access to figures folder](https://drive.google.com/drive/folders/1SGZYF_KFeizWhFbnwu7BL7Thzbvv57qN?usp=sharing)
 
 ## Gists
 
